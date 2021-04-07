@@ -28,6 +28,7 @@ while no_mistakes == False:
             for material in materials["materials"]:
                 materials[material] = input(f"insert {materials}: ")
 
+    print(stats)
     all_good = eval(input("Is this correct (write True or False)?: "))
     if all_good == True:
         no_mistakes = True
