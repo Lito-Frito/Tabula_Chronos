@@ -10,28 +10,53 @@ stats = {
         "model": "",
         "movement" :"",
         "caliber" : "",
-        "type" : "",
-        "materials": {
-                "case": "",
-                "crystal": "",
-                "strap/band" : ""
-                }
+        "jewels" : "",
+        "type (e.g. chronograph)" : "",
+        "power reserve" : "",
+        "water resistance (e.g. 5M)" : "",
+        "warranty" : "",
+        "retail value" : "",
         }
+
+case = {
+        "case material" : "",
+        "case diameter" : "",
+        "case size (lug to lug)" : "",
+        "case thickness" : "",
+        "case crystal" : "",
+        "crown"  : "",
+        }
+
+dial = {
+        "color" : "",
+        "diameter" : "",
+        "markers" : "",
+        "lume" : "",
+}
+
+band = {
+        "strap/band material" : "",
+        "clasp" : "",
+        "width" : "",
+}
 
 # To limit user error
 no_mistakes = False
 while no_mistakes == False:
+    # Create a loop that renames lines in JSON file based on user input
     for attribute in stats:
         stats[attribute] = input(f"insert {attribute}: ")
 
-        if attribute == stats["materials"]:
-            for material in materials["materials"]:
-                materials[material] = input(f"insert {materials}: ")
-
+    # Have user dbl chk
     print(stats)
     all_good = eval(input("Is this correct (write True or False)?: "))
-    if all_good == True:
+    if all_good == True or all_good == 'T':
         no_mistakes = True
+    else:
+        all_good = False
+        no_mistakes = False
+
+
 
 # Create json file
 data = stats
