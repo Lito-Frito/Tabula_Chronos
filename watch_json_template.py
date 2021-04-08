@@ -46,17 +46,69 @@ def get_stats(stats):
     for attribute in stats:
         stats[attribute] = input(f"insert {attribute}: ")
 
+    print(stats)
+    check = input("Is the above correct (Y/N)?: ")
+
+    no_mistakes = False
+    while no_mistakes == False:
+        if check == "Y":
+            break
+        if check == "N":
+            return get_stats(stats)
+        else:
+            print("Please type Y or N.")
+            return get_stats(stats)
+
 def get_case_stats(case):
     for attribute in case:
         case[attribute] = input(f"insert {attribute}: ")
+
+    print(case)
+    check = input("Is the above correct (Y/N)?: ")
+
+    no_mistakes = False
+    while no_mistakes == False:
+        if check == "Y":
+            break
+        if check == "N":
+            return get_case_stats(case)
+        else:
+            print("Please type Y or N.")
+            return get_case_stats(case)
 
 def get_dial_stats(dial):
     for attribute in dial:
         dial[attribute] = input(f"insert {attribute}: ")
 
+    print(dial)
+    check = input("Is the above correct (Y/N)?: ")
+
+    no_mistakes = False
+    while no_mistakes == False:
+        if check == "Y":
+            break
+        if check == "N":
+            return get_dial_stats(dial)
+        else:
+            print("Please type Y or N.")
+            return get_dial_stats(dial)
+
 def get_band_stats(band):
     for attribute in band:
         band[attribute] = input(f"insert {attribute}: ")
+
+    print(band)
+    check = input("Is the above correct (Y/N)?: ")
+
+    no_mistakes = False
+    while no_mistakes == False:
+        if check == "Y":
+            break
+        if check == "N":
+            return get_band_stats(band)
+        else:
+            print("Please type Y or N.")
+            return get_band_stats(band)
 
 get_stats(stats)
 get_case_stats(case)
@@ -66,25 +118,6 @@ get_band_stats(band)
 stats.update(case)
 stats.update(dial)
 stats.update(band)
-
-
-# To limit user error
-no_mistakes = False
-while no_mistakes == False:
-    # Create a loop that renames lines in JSON file based on user input
-    for attribute in stats:
-        stats[attribute] = input(f"insert {attribute}: ")
-
-    # Have user dbl chk
-    print(stats)
-    all_good = eval(input("Is this correct (write True or False)?: "))
-    if all_good == True or all_good == 'T':
-        no_mistakes = True
-    else:
-        all_good = False
-        no_mistakes = False
-
-
 
 # Create json file and add stats
 with open(f"{file_name}.json", "w") as write_file:
