@@ -25,19 +25,20 @@ case = {
         # "case thickness" : "",
         # "case crystal" : "",
         # "crown"  : "",
+        # "bezel" :""
         }
 
 dial = {
-        "color" : "",
-        "diameter" : "",
-        "markers" : "",
-        "lume" : "",
+        "dial color" : "",
+        # "dial diameter" : "",
+        # "dial markers" : "",
+        # "dial/hands lume" : "",
 }
 
 band = {
         "strap/band material" : "",
-        "clasp" : "",
-        "width" : "",
+        # "clasp" : "",
+        # "width" : "",
 }
 
 def get_stats(stats):
@@ -48,10 +49,23 @@ def get_case_stats(case):
     for attribute in case:
         case[attribute] = input(f"insert {attribute}: ")
 
+def get_dial_stats(dial):
+    for attribute in dial:
+        dial[attribute] = input(f"insert {attribute}: ")
+
+def get_band_stats(band):
+    for attribute in band:
+        band[attribute] = input(f"insert {attribute}: ")
+
 get_stats(stats)
 get_case_stats(case)
+get_dial_stats(dial)
+get_band_stats(band)
+
 stats.update(case)
-print(stats)    
+stats.update(dial)
+stats.update(band)
+
 
 # # To limit user error
 # no_mistakes = False
@@ -74,9 +88,3 @@ print(stats)
 # Create json file and add stats
 with open(f"{file_name}.json", "w") as write_file:
     json.dump(stats, write_file,indent=4)
-
-
-
-# # Add case
-# with open(f"{file_name}.json", "w") as write_file:
-#     json.dump(case, write_file,indent=4)
