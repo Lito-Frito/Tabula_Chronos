@@ -6,40 +6,40 @@ file_name = input("List brand and AKA (e.g. Aquacy_BronzeBond) for file name: ")
 # Sample attributes in future DB
 stats = {
         "name or aka" : "",
-        # "brand" : "",
-        # "model": "",
-        # "movement" :"",
-        # "caliber" : "",
-        # "jewels" : "",
-        # "type (e.g. chronograph)" : "",
-        # "power reserve" : "",
-        # "water resistance (e.g. 5M)" : "",
-        # "warranty" : "",
-        # "retail value" : "",
-        # "accuracy" : "",
+        "brand" : "",
+        "model": "",
+        "movement" :"",
+        "caliber" : "",
+        "jewels" : "",
+        "type (e.g. chronograph)" : "",
+        "power reserve" : "",
+        "water resistance (e.g. 5M)" : "",
+        "warranty" : "",
+        "retail value" : "",
+        "accuracy" : "",
         }
 
 case = {
         "case material" : "",
-        # "case diameter" : "",
-        # "case size (lug to lug)" : "",
-        # "case thickness" : "",
-        # "case crystal" : "",
-        # "crown"  : "",
-        # "bezel" :""
+        "case diameter" : "",
+        "case size (lug to lug)" : "",
+        "case thickness" : "",
+        "case crystal" : "",
+        "crown"  : "",
+        "bezel" :""
         }
 
 dial = {
         "dial color" : "",
-        # "dial diameter" : "",
-        # "dial markers" : "",
-        # "dial/hands lume" : "",
+        "dial diameter" : "",
+        "dial markers" : "",
+        "dial/hands lume" : "",
 }
 
 band = {
         "strap/band material" : "",
-        # "clasp" : "",
-        # "width" : "",
+        "clasp" : "",
+        "width" : "",
 }
 
 def get_stats(stats):
