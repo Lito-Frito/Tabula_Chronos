@@ -16,6 +16,7 @@ stats = {
         # "water resistance (e.g. 5M)" : "",
         # "warranty" : "",
         # "retail value" : "",
+        # "accuracy" : "",
         }
 
 case = {
@@ -67,21 +68,21 @@ stats.update(dial)
 stats.update(band)
 
 
-# # To limit user error
-# no_mistakes = False
-# while no_mistakes == False:
-#     # Create a loop that renames lines in JSON file based on user input
-#     for attribute in stats:
-#         stats[attribute] = input(f"insert {attribute}: ")
-#
-#     # Have user dbl chk
-#     print(stats)
-#     all_good = eval(input("Is this correct (write True or False)?: "))
-#     if all_good == True or all_good == 'T':
-#         no_mistakes = True
-#     else:
-#         all_good = False
-#         no_mistakes = False
+# To limit user error
+no_mistakes = False
+while no_mistakes == False:
+    # Create a loop that renames lines in JSON file based on user input
+    for attribute in stats:
+        stats[attribute] = input(f"insert {attribute}: ")
+
+    # Have user dbl chk
+    print(stats)
+    all_good = eval(input("Is this correct (write True or False)?: "))
+    if all_good == True or all_good == 'T':
+        no_mistakes = True
+    else:
+        all_good = False
+        no_mistakes = False
 
 
 
