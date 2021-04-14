@@ -46,8 +46,12 @@ def get_stats(stats):
     for attribute in stats:
         stats[attribute] = input(f"insert {attribute}: ")
 
-    print(stats)
-    check = input("Is the above correct (Y/N)?: ")
+    print("-" * 40)
+    print("\nPrinting stats:")
+
+    for key, value in stats.items():
+        print(key, ":", value)
+    check = input("\nIs the above correct (Y/N)?: ")
 
     no_mistakes = False
     while no_mistakes == False:
@@ -63,8 +67,12 @@ def get_case_stats(case):
     for attribute in case:
         case[attribute] = input(f"insert {attribute}: ")
 
-    print(case)
-    check = input("Is the above correct (Y/N)?: ")
+    print("-" * 40)
+    print("\nPrinting stats:")
+
+    for key, value in case.items():
+        print(key, ":", value)
+    check = input("\nIs the above correct (Y/N)?: ")
 
     no_mistakes = False
     while no_mistakes == False:
@@ -80,8 +88,12 @@ def get_dial_stats(dial):
     for attribute in dial:
         dial[attribute] = input(f"insert {attribute}: ")
 
-    print(dial)
-    check = input("Is the above correct (Y/N)?: ")
+    print("-" * 40)
+    print("\nPrinting stats:")
+
+    for key, value in dial.items():
+        print(key, ":", value)
+    check = input("\nIs the above correct (Y/N)?: ")
 
     no_mistakes = False
     while no_mistakes == False:
@@ -97,8 +109,12 @@ def get_band_stats(band):
     for attribute in band:
         band[attribute] = input(f"insert {attribute}: ")
 
-    print(band)
-    check = input("Is the above correct (Y/N)?: ")
+    print("-" * 40)
+    print("\nPrinting stats:")
+
+    for key, value in band.items():
+        print(key, ":", value)
+    check = input("\nIs the above correct (Y/N)?: ")
 
     no_mistakes = False
     while no_mistakes == False:
