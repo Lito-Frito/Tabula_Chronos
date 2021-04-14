@@ -51,17 +51,17 @@ def get_stats(stats):
 
     for key, value in stats.items():
         print(key, ":", value)
-    check = input("\nIs the above correct (Y/N)?: ")
 
     no_mistakes = False
     while no_mistakes == False:
+        check = input("\nIs the above correct (Y/N)?: ")
         if check == "Y":
             break
         if check == "N":
             return get_stats(stats)
         else:
             print("Please type Y or N.")
-            return get_stats(stats)
+
 
 def get_case_stats(case):
     for attribute in case:
@@ -72,17 +72,17 @@ def get_case_stats(case):
 
     for key, value in case.items():
         print(key, ":", value)
-    check = input("\nIs the above correct (Y/N)?: ")
 
     no_mistakes = False
     while no_mistakes == False:
+        check = input("\nIs the above correct (Y/N)?: ")
         if check == "Y":
             break
         if check == "N":
             return get_case_stats(case)
         else:
             print("Please type Y or N.")
-            return get_case_stats(case)
+            
 
 def get_dial_stats(dial):
     for attribute in dial:
@@ -93,17 +93,17 @@ def get_dial_stats(dial):
 
     for key, value in dial.items():
         print(key, ":", value)
-    check = input("\nIs the above correct (Y/N)?: ")
 
     no_mistakes = False
     while no_mistakes == False:
+        check = input("\nIs the above correct (Y/N)?: ")
         if check == "Y":
             break
         if check == "N":
             return get_dial_stats(dial)
         else:
             print("Please type Y or N.")
-            return get_dial_stats(dial)
+
 
 def get_band_stats(band):
     for attribute in band:
@@ -114,17 +114,17 @@ def get_band_stats(band):
 
     for key, value in band.items():
         print(key, ":", value)
-    check = input("\nIs the above correct (Y/N)?: ")
 
     no_mistakes = False
     while no_mistakes == False:
+        check = input("\nIs the above correct (Y/N)?: ")
         if check == "Y":
             break
         if check == "N":
             return get_band_stats(band)
         else:
             print("Please type Y or N.")
-            return get_band_stats(band)
+
 
 get_stats(stats)
 get_case_stats(case)
