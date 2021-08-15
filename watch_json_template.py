@@ -16,7 +16,7 @@ stats = {
         "water resistance (e.g. 5M)" : "",
         "warranty" : "",
         "retail value" : "",
-        "accuracy" : "",
+        "accuracy" : ""
         }
 
 case = {
@@ -40,6 +40,11 @@ band = {
         "strap/band material" : "",
         "clasp" : "",
         "width" : "",
+}
+
+features = {
+        "Day complication (include language complications)?": "",
+        "Date complication?": ""
 }
 
 def get_stats(stats):
@@ -126,14 +131,38 @@ def get_band_stats(band):
             print("Please type Y or N.")
 
 
+def get_features(features):
+    for feature in features:
+        features[feature] = input(f"insert {feature}: ")
+
+    print("-" * 40)
+    print("\nPrinting stats:")
+
+    for key, value in features.items():
+        print(key, ":", value)
+
+    no_mistakes = False
+    while no_mistakes == False:
+        check = input("\nIs the above correct (Y/N)?: ")
+        if check == "Y" or check == "y":
+            break
+        if check == "N" or check == "n":
+            return get_features(stats)
+        else:
+            print("Please type Y or N.")
+
+
+
 get_stats(stats)
 get_case_stats(case)
 get_dial_stats(dial)
 get_band_stats(band)
+get_features(features)
 
 stats.update(case)
 stats.update(dial)
 stats.update(band)
+stats.update(features)
 
 # Create json file and add stats
 with open(f"{file_name}.json", "w") as write_file:
