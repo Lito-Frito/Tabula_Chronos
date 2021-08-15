@@ -55,9 +55,9 @@ def get_stats(stats):
     no_mistakes = False
     while no_mistakes == False:
         check = input("\nIs the above correct (Y/N)?: ")
-        if check == "Y":
+        if check == "Y" or check == "y":
             break
-        if check == "N":
+        if check == "N" or check == "n":
             return get_stats(stats)
         else:
             print("Please type Y or N.")
@@ -76,13 +76,13 @@ def get_case_stats(case):
     no_mistakes = False
     while no_mistakes == False:
         check = input("\nIs the above correct (Y/N)?: ")
-        if check == "Y":
+        if check == "Y" or check == "y":
             break
-        if check == "N":
+        if check == "N" or check == "n":
             return get_case_stats(case)
         else:
             print("Please type Y or N.")
-            
+
 
 def get_dial_stats(dial):
     for attribute in dial:
@@ -97,9 +97,9 @@ def get_dial_stats(dial):
     no_mistakes = False
     while no_mistakes == False:
         check = input("\nIs the above correct (Y/N)?: ")
-        if check == "Y":
+        if check == "Y" or check == "y":
             break
-        if check == "N":
+        if check == "N" or check == "n":
             return get_dial_stats(dial)
         else:
             print("Please type Y or N.")
@@ -118,9 +118,9 @@ def get_band_stats(band):
     no_mistakes = False
     while no_mistakes == False:
         check = input("\nIs the above correct (Y/N)?: ")
-        if check == "Y":
+        if check == "Y" or check == "y":
             break
-        if check == "N":
+        if check == "N" or check == "n":
             return get_band_stats(band)
         else:
             print("Please type Y or N.")
