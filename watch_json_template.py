@@ -133,7 +133,7 @@ def get_band_stats(band):
 
 def get_features(features):
     for feature in features:
-        features[feature] = input(f"insert {feature}: ")
+        features[feature] = input(f"{feature}: ")
 
     print("-" * 40)
     print("\nPrinting stats:")
