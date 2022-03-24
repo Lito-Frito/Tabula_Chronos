@@ -1,51 +1,53 @@
 import json
 
 # Name for json file to be created
-file_name = input("List brand and AKA (e.g. Aquacy_BronzeBond) for file name: ")
+file_name = input(
+    "List brand and AKA (e.g. Aquacy_BronzeBond) for file name: ")
 
 # Sample attributes in future DB
 stats = {
-        "name or aka" : "",
-        "brand" : "",
+        "name/aka": "__name__",
+        "brand": "",
         "model": "",
-        "movement" :"",
-        "caliber" : "",
-        "jewels" : "",
-        "type (e.g. chronograph)" : "",
-        "power reserve" : "",
-        "water resistance (e.g. 5M)" : "",
-        "warranty" : "",
-        "retail value" : "",
-        "accuracy" : ""
+        "movement": "",
+        "caliber": "",
+        "jewels": "",
+        "type (e.g. chronograph)": "",
+        "power reserve": "",
+        "water resistance (e.g. 5M)": "",
+        "warranty": "",
+        "retail value": "",
+        "accuracy": ""
         }
 
 case = {
-        "case material" : "",
-        "case diameter" : "",
-        "case size (lug to lug)" : "",
-        "case thickness" : "",
-        "case crystal" : "",
-        "crown"  : "",
-        "bezel" :""
+        "case material": "",
+        "case diameter": "",
+        "case size (lug to lug)": "",
+        "case thickness": "",
+        "case crystal": "",
+        "crown": "",
+        "bezel": ""
         }
 
 dial = {
-        "dial color" : "",
-        "dial diameter" : "",
-        "dial markers" : "",
-        "dial/hands lume" : "",
+        "dial color": "",
+        "dial diameter": "",
+        "dial markers": "",
+        "dial/hands lume": "",
 }
 
 band = {
-        "strap/band material" : "",
-        "clasp" : "",
-        "width" : "",
+        "strap/band material": "",
+        "clasp": "",
+        "width": "",
 }
 
 features = {
         "Day complication (include language complications)?": "",
         "Date complication?": ""
 }
+
 
 def get_stats(stats):
     for attribute in stats:
@@ -152,7 +154,6 @@ def get_features(features):
             print("Please type Y or N.")
 
 
-
 get_stats(stats)
 get_case_stats(case)
 get_dial_stats(dial)
@@ -166,4 +167,4 @@ stats.update(features)
 
 # Create json file and add stats
 with open(f"{file_name}.json", "w") as write_file:
-    json.dump(stats, write_file,indent=4)
+    json.dump(stats, write_file, indent=4)
